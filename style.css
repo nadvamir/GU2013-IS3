@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	font: 16px;
+	font: 100%;
+	font-family: Georgia, serif;
+}
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#page {
+	height: 100%;
+	width: 100%;
+	max-width: 1300px;
+	box-shadow: 0 0 10px #333;
+	display: inline-block;
+	text-align: left;
+}
+
+#left {
+	float: left;
+	width: 300px;
+	height: 100%;
+	background-color: #444;
+	color: white;
+}
+
+#right {
+	height: 100%;
+	margin-left: 300px;
+	position: relative;
+	background-color: black;
+}
+
+/* ------------------------------------------------------ */
+/* left menu */
+/* ------------------------------------------------------ */
+
+#left h1 {
+	padding: 10px 20px;
+	border-bottom: 1px solid white;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+#left ol, #left ul {
+	border-bottom: 1px solid white;
+}
+#left ol {
+	background-color: #6d5b5b;
+	display: none;
+}
+
+#left ol li, #left ul li {
+	list-style: none;
+	font-size: 20px;
+	padding: 5px 20px;
+	border-bottom: 1px solid #888;
+	cursor: pointer;
+}
+#left ol li:last-child, #left ul li:last-child {
+	border-bottom: 0;
+}
+#left ol li {
+	border-bottom: 1px solid #9d6b6b;
+}
+
+#left ol li:hover {
+	background-color: #9b6666;
+}
+#left ul li:hover {
+	background-color: #666;
+}
+
+#left ul li.active {
+	text-decoration: underline;
+}
+
+#left ol li a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: white;
+	text-decoration: none;
+}
+
+/* ------------------------------------------------------ */
+/* general right css */
+/* ------------------------------------------------------ */
+#right .subwindow {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: white;
+}
+
+#right .subwindow h1 {
+	padding: 10px 20px;
+	border-bottom: 1px solid black;
+	font-size: 24px;
+}
+#right .subwindow .content {
+	padding: 5px 20px;
+}

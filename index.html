@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IS3 Prototype</title>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="controls.js"></script>
+	<!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<div id="page">
+	<section id="left">
+		<h1 onclick="toggleMainNav();">Descriptive stats</h1>
+		<ol>
+			<li><a href="index.html">Descriptive stats</a></li>
+			<li><a href="clustering.html">Clustering</a></li>
+			<li><a href="predictions.html">Predictions</a></li>
+			<li><a href="analysis.html">Analysis and overview</a></li>
+		</ol>
+		<ul>
+			<li onclick="openSubwindow.call(this, 'general');">General trends</li>
+			<li onclick="openSubwindow.call(this, 'correlations');">Correlations</li>
+			<li onclick="openSubwindow.call(this, 'distributions');">Distributions</li>
+		</u	l>
+	</section>	
+	<section id="right">
+		<article id="general" class="subwindow">
+			<h1>General trends</h1>
+			<div class="content">
+				General information like minimums maximums
+			</div>
+		</article>
+		<article id="correlations" class="subwindow">
+			<h1>Correlations</h1>
+			<div class="content">
+				Correlation exploration
+			</div>
+		</article>
+		<article id="distributions" class="subwindow">
+			<h1>Distributions</h1>
+			<div class="content">
+				Visualisation of different distributions
+			</div>
+		</article>
+	</section>
+</div>
+</body>
+</html>
