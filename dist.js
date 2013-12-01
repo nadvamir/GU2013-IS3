@@ -5,7 +5,9 @@ function dchart() {
 	var data = google.visualization.arrayToDataTable(dataset);
 
 	var options = {
-	  title: title
+	  title: title,
+	  width: 800,
+	  height: 500
 	};
 
 	var distchart = new google.visualization.LineChart(document.getElementById('dist_chart'));
