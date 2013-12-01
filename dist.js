@@ -1,4 +1,4 @@
-function select() {
+function distSelect() {
 	console.log(1);
 	var mylist = document.getElementById("distList");
 	var title = mylist.options[mylist.selectedIndex].text;
