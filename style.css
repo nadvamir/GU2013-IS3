@@ -54,7 +54,7 @@ html, body {
 	border-bottom: 1px solid #888;
 }
 #left ol {
-	background-color: #318BCC;
+	background-color: #5FB7F5;
 	display: none;
 }
 
@@ -73,7 +73,7 @@ html, body {
 }
 
 #left ol li:hover {
-	background-color: #5FB7F5;
+	background-color: #318BCC;
 }
 #left ul li:hover {
 	background-color: #D1D1D1;
