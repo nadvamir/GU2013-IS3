@@ -7,36 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="predictions.js"></script>
 	<script src="controls.js"></script>
 	<!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
-    
-     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Country', 'Actual', 'Predicted'],
-          ['Great Britain',  45,      23],
-          ['China',  60,      70],
-          ['United States',  62,       71],
-          ['France',  30,       22],
-          ['Italy',  11,       15],
-          ['Germany',  10,       21],
-          ['Canada',  42,       50],
-          ['Sweden',  22,       21],
-          ['Russia',  37,      42]
-        ]);
 
-        var options = {
-          title: 'Medal Predictions',
-          hAxis: {title: 'Country', titleTextStyle: {color: 'gray'}},
-          vAxis: {title: 'Number of Medals', titleTextStyle: {color: 'gray'}}    
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
 </head>
 <body>
 <div id="page">
