@@ -8,6 +8,9 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="controls.js"></script>
 	<!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="dist.js"></script>
 </head>
 <body>
 <div id="page">
@@ -23,7 +26,7 @@
 			<li onclick="openSubwindow.call(this, 'general');">General trends</li>
 			<li onclick="openSubwindow.call(this, 'correlations');">Correlations</li>
 			<li onclick="openSubwindow.call(this, 'distributions');">Distributions</li>
-		</u	l>
+		</ul>
 	</section>	
 	<section id="right">
 		<article id="general" class="subwindow">
@@ -40,8 +43,9 @@
 		</article>
 		<article id="distributions" class="subwindow">
 			<h1>Distributions</h1>
-			<div class="content">
-				Visualisation of different distributions
+			<div class="content" >
+				<script>dchart();</script>
+				<div id="dist_chart" style="width: 1000px; height: 500px;"></div>
 			</div>
 		</article>
 	</section>
