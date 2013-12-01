@@ -22,6 +22,7 @@ function select() {
 		var data = google.visualization.arrayToDataTable(dataset);
 		var options = {
 			title: title,
+			curveType: "function",
 			width: 0,
 			height: 440
 		};
