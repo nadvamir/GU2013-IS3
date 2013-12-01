@@ -1,9 +1,11 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700,400italic');
+
 * {
 	margin: 0;
 	padding: 0;
 	font: 16px;
 	font: 100%;
-	font-family: Georgia, serif;
+	font-family: Lato;
 }
 
 html, body {
@@ -16,22 +18,23 @@ html, body {
 	height: 100%;
 	width: 100%;
 	max-width: 1300px;
-	box-shadow: 0 0 10px #333;
+	box-shadow: 0 0 10px #E0E0E0;
 	display: inline-block;
 	text-align: left;
 }
+
 
 #left {
 	float: left;
 	width: 300px;
 	height: 100%;
-	background-color: #444;
-	color: white;
+	background-color: #E0E0E0;
+	color: #525252;
 }
 
 #right {
 	height: 100%;
-	margin-left: 300px;
+	margin-left: 280px;
 	position: relative;
 	background-color: black;
 }
@@ -42,16 +45,16 @@ html, body {
 
 #left h1 {
 	padding: 10px 20px;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #888;
 	cursor: pointer;
 	font-size: 24px;
 }
 
 #left ol, #left ul {
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #888;
 }
 #left ol {
-	background-color: #6d5b5b;
+	background-color: #318BCC;
 	display: none;
 }
 
@@ -66,14 +69,14 @@ html, body {
 	border-bottom: 0;
 }
 #left ol li {
-	border-bottom: 1px solid #9d6b6b;
+	border-bottom: 1px solid #01939A;
 }
 
 #left ol li:hover {
-	background-color: #9b6666;
+	background-color: #5FB7F5;
 }
 #left ul li:hover {
-	background-color: #666;
+	background-color: #D1D1D1;
 }
 
 #left ul li.active {
