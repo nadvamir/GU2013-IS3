@@ -44,7 +44,18 @@
 		<article id="distributions" class="subwindow">
 			<h1>Distributions</h1>
 			<div class="content" >
-				<script>dchart();</script>
+				<script></script>
+				<select id="distList" onchange="select();">
+					<option disabled selected="selected">Select</option>
+					<option>GDP</option>
+					<option>Population</option>
+					<option>Team Size</option>  
+					<option>Females</option>
+					<option>Males</option>
+					<option>Gold</option>
+					<option>Silver</option>
+					<option>Bronze</option>
+				</select>
 				<div id="dist_chart" style="width: 100%; height: 100%;"></div>
 			</div>
 		</article>
