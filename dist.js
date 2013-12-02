@@ -1,9 +1,34 @@
 function distSelect() {
-	console.log(1);
 	var mylist = document.getElementById("distList");
 	var title = mylist.options[mylist.selectedIndex].text;
-	var dataset = [
-		['Range', 'Countries'],
+	google.load("visualization", "1", {packages:["corechart"], "callback" : drawChart});
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable(dataset[mylist.options[mylist.selectedIndex].value]);
+		var options = {
+			title: title,
+			//curveType: "function",
+			width: 0,
+			height: 440
+		};
+		var distchart = new google.visualization.LineChart(document.getElementById('dist_chart'));
+		distchart.draw(data, options);
+	};
+};
+
+var dataset = [
+	[['Range', 'Countries'],
+	['1 - 2 billions',  65],
+	['2 - 3 billions',  26],
+	['3 - 4 billions',  14],
+	['4 - 5 billions',  5],
+	['5 - 6 billions',  9],
+	['6 - 7 billions',  8],
+	['7 - 8 billions',  4],
+	['8 - 9 billions',  2],
+	['9 - 10 billions',  0],
+	['10+ billions',  64]],
+
+	[	['Range', 'Countries'],
 		['1',  660],
 		['2',  1000],
 		['3',  1030],
@@ -13,24 +38,5 @@ function distSelect() {
 		['7',  1030],
 		['8',  850],
 		['9',  730],
-		['10',  600]
+		['10',  600]]
 	];
-	console.log(2);
-	google.load("visualization", "1", {packages:["corechart"], "callback" : drawChart});
-	function drawChart() {
-		console.log(3);
-		var data = google.visualization.arrayToDataTable(dataset);
-		var options = {
-			title: title,
-			curveType: "function",
-			width: 0,
-			height: 440
-		};
-
-		var distchart = new google.visualization.LineChart(document.getElementById('dist_chart'));
-		distchart.draw(data, options);
-	};
-	console.log(4);
-};
-
-

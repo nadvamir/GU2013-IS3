@@ -26,7 +26,7 @@
 		<ul>
 			<li onclick="openSubwindow.call(this, 'general');">General trends</li>
 			<li onclick="openSubwindow.call(this, 'correlations');">Correlations</li>
-			<li onclick="openSubwindow.call(this, 'distributions');">Distributions</li>
+			<li onclick="openSubwindow.call(this, 'distributions'); distSelect();">Distributions</li>
 		</ul>
 	</section>	
 	<section id="right">
@@ -47,17 +47,16 @@
 		<article id="distributions" class="subwindow">
 			<h1>Distributions</h1>
 			<div class="content" >
-				<script></script>
 				<select id="distList" onchange="distSelect();">
-					<option disabled selected="selected">Select</option>
-					<option>GDP</option>
-					<option>Population</option>
-					<option>Team Size</option>  
-					<option>Females</option>
-					<option>Males</option>
-					<option>Gold</option>
-					<option>Silver</option>
-					<option>Bronze</option>
+					<option value="0">GDP</option>
+					<option value="1">Population</option>
+					<option value="2">Team Size</option>  
+					<option value="3">Females</option>
+					<option value="4">Males</option>
+					<option value="5">Gold</option>
+					<option value="6">Silver</option>
+					<option value="7">Bronze</option>
+					<option value="8">Medals</option>
 				</select>
 				<div id="dist_chart" style="width: 100%; height: 100%;"></div>
 			</div>
