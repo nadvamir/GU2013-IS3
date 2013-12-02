@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>IS3 Prototype</title>
@@ -35,14 +36,34 @@
 			           <p>Please select an option from the menu below</p>
 				            <script></script>
 				            <select id="genstatsList" onchange="genstats();">
-					            <option disabled selected="selected">Select</option>
-					            <option>Heat Map</option>
-					            <option>Column Graph</option>
-					            <option>Line Graph</option>
+				            	    <option disabled selected="selected">Select</option>
+					            <option value="0">Heat Map</option>
+					            <option value="1">Column Graph</option>
+					            <option value="2">Line Graph</option>
 				            </select>
 				            <div id="geo_div" style="width: 1000px; height: 600px;"></div>
 				            <div id="column_div" style="width: 1000px; height: 500px;"></div>
 				            <div id="line_div" style="width: 1000px; height: 500px;"></div>
+					    <div id="geomapList">
+				            	    <select id="list1" onchange="genstats();">
+				            	    	<option value="0">[All Countries]</option>
+					            	<option value="1">United States</option>
+					            	<option value="2">China</option>
+					            	<option value="3">Russia</option>
+					            	<option value="4">United Kingdom</option>
+					            	<option value="5">Germany</option>
+				           	    </select>
+				            </div>
+				            <div id="columnchartList">
+				            	    <select id="list2" onchange="genstats();">
+				            	    	<option value="0">[All Countries]</option>
+				           	    </select>
+				            </div>
+				            <div id="linechartList">
+				            	    <select id="list3" onchange="genstats();">
+				            	    	<option value="0">[All Countries]</option>
+				           	    </select>
+				            </div>
 			            </div>
 		</article>
 		<article id="correlations" class="subwindow">
