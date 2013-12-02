@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>IS3 Prototype</title>
-	<meta charset="UTF-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="controls.js"></script>
-	<!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
-	
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<script type="text/javascript" src="dist.js"></script>
-	<script type="text/javascript" src="genstats.js"></script>
+        <title>IS3 Prototype</title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="controls.js"></script>
+        <!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
+        
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="dist.js"></script>
+        <script type="text/javascript" src="genstats.js"></script>
 </head>
 <body>
 <div id="page">
-	<section id="left">
-		<h1 onclick="toggleMainNav();">Descriptive stats</h1>
-		<ol>
-			<li><a href="index.html">Descriptive stats</a></li>
-			<li><a href="clustering.html">Clustering</a></li>
-			<li><a href="predictions.html">Predictions</a></li>
-			<li><a href="analysis.html">Analysis and overview</a></li>
-		</ol>
-		<ul>
-			<li onclick="openSubwindow.call(this, 'general');">General trends</li>
-			<li onclick="openSubwindow.call(this, 'correlations');">Correlations</li>
-			<li onclick="openSubwindow.call(this, 'distributions');">Distributions</li>
-		</ul>
-	</section>	
-	<section id="right">
-		<article id="general" class="subwindow">
-			<h1>General trends</h1>
-			<div class="content">
-				<script></script>
-				<div id="geo_div" style="width: 85%; height: 85%;"></div>
-				<p>Total Number of Medals Awarded: 962</p>	
-			</div>
-		</article>
-		<article id="correlations" class="subwindow">
-			<h1>Correlations</h1>
-			<div class="content">
-				Correlation exploration
-			</div>
-		</article>
-		<article id="distributions" class="subwindow">
-			<h1>Distributions</h1>
-			<div class="content" >
-				<script></script>
-				<select id="distList" onchange="distSelect();">
-					<option disabled selected="selected">Select</option>
-					<option>GDP</option>
-					<option>Population</option>
-					<option>Team Size</option>  
-					<option>Females</option>
-					<option>Males</option>
-					<option>Gold</option>
-					<option>Silver</option>
-					<option>Bronze</option>
-				</select>
-				<div id="dist_chart" style="width: 100%; height: 100%;"></div>
-			</div>
-		</article>
-	</section>
+        <section id="left">
+                <h1 onclick="toggleMainNav();">Descriptive stats</h1>
+                <ol>
+                        <li><a href="index.html">Descriptive stats</a></li>
+                        <li><a href="clustering.html">Clustering</a></li>
+                        <li><a href="predictions.html">Predictions</a></li>
+                        <li><a href="analysis.html">Analysis and overview</a></li>
+                </ol>
+                <ul>
+                        <li onclick="openSubwindow.call(this, 'general');">General trends</li>
+                        <li onclick="openSubwindow.call(this, 'correlations');">Correlations</li>
+                        <li onclick="openSubwindow.call(this, 'distributions');">Distributions</li>
+                </ul>
+        </section>        
+        <section id="right">
+                <article id="general" class="subwindow">
+                       <h1>General trends</h1>
+			           <div class="content">
+			           <p>Please select an option from the menu below</p>
+				            <script></script>
+				            <select id="genstatsList" onchange="genstats();">
+					            <option disabled selected="selected">Select</option>
+					            <option>Heat Map</option>
+					            <option>Column Graph</option>
+					            <option>Line Graph</option>
+				            </select>
+				            <div id="geo_div" style="width: 1250px; height: 750px;"></div>
+				            <div id="column_div" style="width: 1250px; height: 750px;"></div>
+				            <div id="line_div" style="width: 1250px; height: 750px;"></div>
+			            </div>
+                </article>
+                <article id="correlations" class="subwindow">
+                        <h1>Correlations</h1>
+                        <div class="content">
+                                Correlation exploration
+                        </div>
+                </article>
+                <article id="distributions" class="subwindow">
+                        <h1>Distributions</h1>
+                        <div class="content" >
+                                <script></script>
+                                <select id="distList" onchange="distSelect();">
+                                        <option disabled selected="selected">Select</option>
+                                        <option>GDP</option>
+                                        <option>Population</option>
+                                        <option>Team Size</option>  
+                                        <option>Females</option>
+                                        <option>Males</option>
+                                        <option>Gold</option>
+                                        <option>Silver</option>
+                                        <option>Bronze</option>
+                                </select>
+                                <div id="dist_chart" style="width: 100%; height: 100%;"></div>
+                        </div>
+                </article>
+        </section>
 </div>
 </body>
 </html>
