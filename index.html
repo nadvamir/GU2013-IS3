@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>IS3 Prototype</title>
@@ -32,11 +31,19 @@
 	<section id="right">
 		<article id="general" class="subwindow">
 			<h1>General trends</h1>
-			<div class="content">
-				<script></script>
-				<div id="geo_div" style="width: 85%; height: 85%;"></div>
-				<p>Total Number of Medals Awarded: 962</p>	
-			</div>
+			           <div class="content">
+			           <p>Please select an option from the menu below</p>
+				            <script></script>
+				            <select id="genstatsList" onchange="genstats();">
+					            <option disabled selected="selected">Select</option>
+					            <option>Heat Map</option>
+					            <option>Column Graph</option>
+					            <option>Line Graph</option>
+				            </select>
+				            <div id="geo_div" style="width: 1000px; height: 600px;"></div>
+				            <div id="column_div" style="width: 1000px; height: 500px;"></div>
+				            <div id="line_div" style="width: 1000px; height: 500px;"></div>
+			            </div>
 		</article>
 		<article id="correlations" class="subwindow">
 			<h1>Correlations</h1>
