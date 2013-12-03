@@ -112,7 +112,6 @@ html, body {
 #right .subwindow .content {
 	padding: 5px 20px;
 }
-
 #data-params {
 	position: absolute;	
 }
@@ -135,3 +134,25 @@ html, body {
 	position: absolute;
 	right: 10px;
 }
+
+/* ------------------------------------------------------ */
+/* predictions */
+/* ------------------------------------------------------ */
+#input-fields > * {
+	float: left;
+}
+
+#input-fields > label + input {
+	clear: left;
+}
+
+
+/* ------------------------------------------------------ */
+/* clusters */
+/* ------------------------------------------------------ */
+.scplot {
+    width: 100%;
+    height: 600px;
+}
+
+

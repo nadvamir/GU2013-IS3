@@ -9,6 +9,8 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="predictions.js"></script>
 	<script src="controls.js"></script>
+	<script type="text/javascript" src="bigData.js"></script>
+	<script type="text/javascript" src="InteractivePrediction.js"></script>
 	<!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
 
 </head>
@@ -18,20 +20,36 @@
 		<h1 onclick="toggleMainNav();">Predictions</h1>
 		<ol>
 			<li><a href="index.html">Descriptive stats</a></li>
-			<li><a href="clustering.html">Clustering</a></li>
+			<li><a href="clustering.html">2D Projections</a></li>
 			<li><a href="predictions.html">Predictions</a></li>
 			<li><a href="analysis.html">Analysis and overview</a></li>
 		</ol>
 		<ul>
-			<li onclick="openSubwindow.call(this, 'interactive');">Medal Predictions</li>
-		</u	l>
+			<li onclick="openSubwindow.call(this,
+                        'graph');">Medal Predictions Graph</li>
+			<li onclick="openSubwindow.call(this,
+                        'interactive');showContries(document.forms[0].country);test(document.forms[0].country.value);">Interactive Medal Predictions</li>
+		</ul>
 	</section>	
 	<section id="right">
-		<article id="interactive" class="subwindow">
-			<h1>Medal Predictions</h1>
+		<article id="graph" class="subwindow">
+			<h1>Medal Predictions Graph</h1>
 			<div class="content">
                 <p>The graph below shows a direct comparison of medals won by each country and what we predicted them - based on the data given - to have won. </p>
                 <div id="chart_div" style="width: 1000px; height: 500px;"></div>
+			</div>
+		</article>
+		<article id="interactive" class="subwindow">
+			<h1>Interactive Medal Predictions</h1>
+			<div class="content">
+                		<p>Enter the values to predict medal count:</p>
+				<form>
+				    <select name="country" onchange="clearPrediction();test(document.forms[0].country.value);" > 
+				    </select>
+				    <INPUT type="button" value="Predict" id="PredictedB" onclick="predicted()"  />
+				    <INPUT type="input" id="PredictedValue"  style="text-align: center"/><label for="PredictedValue">: Predicted Medals</label>
+				    <div id="input-fields"> </div>
+				</form>
 			</div>
 		</article>
 	</section>

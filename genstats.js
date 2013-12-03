@@ -1,12 +1,39 @@
 function genstats(){
-    
-    var geomapOption1 = document.getElementById("options1");
+    var geomapOption = document.getElementById("options");
     var title = "Heat Map";
+
+	google.load("visualization", "1", {packages:["geochart"], "callback" : drawGeoChart});
+
+	function drawGeoChart() {
+		var data = google.visualization.arrayToDataTable(dataset);
+	    var regionSelect = 'world';
+	    var continent = geomapOption.options[geomapOption.selectedIndex].value
+	    
+	    if (continent == 0) {regionSelect = 'world'} 
+	    else if (continent == 1) {regionSelect = '002'}
+	    else if (continent == 2) {regionSelect = '142'}
+	    else if (continent == 3) {regionSelect = '150'}
+	    else if (continent == 4) {regionSelect = '021'}
+	    else if (continent == 5) {regionSelect = '005'}
+	    else if (continent == 6) {regionSelect = '013'}
+	    else if (continent == 7) {regionSelect = '029'}
+	    else if (continent == 8) {regionSelect = '009'}
+	    
+       	var options = {
+        	title: title,
+        	colorAxis: {colors: ['yellow','red']},
+        	backgroundColor: '#336699',
+        	region: regionSelect
+        };
+        
+        var geochart = new google.visualization.GeoChart(document.getElementById('geo_div'));
+        geochart.draw(data, options);
+    };
     
     var dataset = [
     
-	    ['Country', 'Total Medals', 'Team Size'],
-	    ['Afghanistan', 1, 6],
+		['Country', 'Total Medals', 'Team Size'],
+		['Afghanistan', 1, 6],
         ['Albania', 0, 11],
         ['Algeria', 1, 39],
         ['Andorra', 0, 6],
@@ -203,34 +230,5 @@ function genstats(){
         ['Zimbabwe', 0, 7]
 	
     ];
-    
-    google.load("visualization", "1", {packages:["geochart"], "callback" : drawGeoChart});
-    	
-    function drawGeoChart() {
-        
-	    var regionSelect = '';
-	    var continent = geomapOption1.options[geomapOption1.selectedIndex].value
-	    
-	    if (continent == 0) {regionSelect = 'world'} 
-	    else if (continent == 1) {regionSelect = '002'}
-	    else if (continent == 2) {regionSelect = '142'}
-	    else if (continent == 3) {regionSelect = '150'}
-	    else if (continent == 4) {regionSelect = '021'}
-	    else if (continent == 5) {regionSelect = '005'}
-	    else if (continent == 6) {regionSelect = '013'}
-	    else if (continent == 7) {regionSelect = '029'}
-	    else if (continent == 8) {regionSelect = '009'}
-	    
-	    
-	    var data = google.visualization.arrayToDataTable(dataset);
-        var options = {
-            title: title,
-            colorAxis: {colors: ['yellow','red']},
-            backgroundColor: '#336699',
-            region: regionSelect
-        };
-        var geochart = new google.visualization.GeoChart(document.getElementById('geo_div'));
-        geochart.draw(data, options);
-    };
     
 };
