@@ -1,7 +1,7 @@
-var column =["GDP2011","F2012","M2012","TeamSize","Number of dentistry personnel","Number of nursing and midwifery personnel","Number of physicians","Breast_cancer_deaths_per_100_000_women","Breast_cancer_new_cases_per_100_000_women","Breast_cancer_number_of_female_deaths","Capital_formation",
-"Colon_and_Rectum_cancer_new_cases_per_100_000_men","Colon_and_Rectum_cancer_new_cases_per_100_000_women","Colon_and_Rectum_cancer_number_of_female_deaths",
-"Colon_and_Rectum_cancer_number_of_male_deaths","Lung_cancer_new_cases_per_100_000_men","Lung_cancer_new_cases_per_100_000_women","Lung_cancer_number_of_female_deaths",	
-"Lung_cancer_number_of_male_deaths","Prostate_cancer_deaths_per_100_000_men","Surface_area","Tax_revenue"																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
+var column =["GDP2011","F2012","M2012","TeamSize","Number of dentistry personnel","Number of nursing and midwifery personnel","Number of physicians","Breast cancer deaths per 100_000 women","Breast cancer new cases per 100000 women","Breast cancer number of female deaths","Capital formation",
+"Colon and Rectum cancer new cases per 100000 men","Colon and Rectum cancer new cases per 100000 women","Colon and Rectum cancer number of female deaths",
+"Colon and Rectum cancer number of male deaths","Lung cancer new cases per 100000 men","Lung cancer new cases per 100000 women","Lung cancer number of female deaths",	
+"Lung cancer number of male deaths","Prostate cancer deaths per 100000 men","Surface area","Tax revenue"																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
 ];
 
 correlation = [1.620525629155674e-11, 3.823360302614386e-10, 4.910070407988125e-10, 1.0435647292413e-09, -1.021722548638581e-08, -4.330423175136994e-07, -7.606026964545252e-07, -1.834479187590535e-08, -6.290370343565338e-08, -4.817752752107282e-07, 1.333472937355754e-07, -1.467052087137976e-09, -5.355793207997355e-09, -1.965021729186099e-09, -7.371994537409069e-11, -5.048682829772618e-08, -7.089560834082591e-08, -6.484838925087961e-08, -9.175853618312955e-08, 1.008489106700303e-08, -4.192843224961981e-06, -1.005249202737765e-11]
@@ -28,14 +28,21 @@ function showContries(a){
 	var text;
 	var inp;
 	for (var i = 0;i < column.length;i++){
-		text=document.createTextNode(column[i]+" : ");
+		text=document.createTextNode(" : "+column[i]);
 		inp =document.createElement("input");
+		//inp.readOnly = true;
 		inp.setAttribute("id", column[i]);
+		inp.style.textAlign="center";
+		//inp.style.backgroundColor = 'white';
+		//inp.style.borderColor = 'white';
 		document.body.appendChild(document.createElement('br'));
+		document.body.appendChild(inp);
 		document.body.appendChild(text);
-		document.body.appendChild(inp);	
+			
 	}
+	document.body.appendChild(document.createElement('br'));
 	//document.getElementById('showbutton').style.visibility = 'hidden';
+	
 }
 function test(value){
 	var d = database(value);
@@ -55,5 +62,10 @@ function predicted(){
 	if (num < 0)
 		num = 0;
 	num =  Math.round(num);
-	alert(num + " Medal(s)");
+	document.getElementById('PredictedValue').value = num;
+	//alert(num + " Medal(s)");
 }
+function clearPrediction(){
+	document.getElementById('PredictedValue').value = "";
+}
+

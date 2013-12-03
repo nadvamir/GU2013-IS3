@@ -17,6 +17,5 @@ function openSubwindow( id ) {
 
 // on the load of the document
 $(document).ready( function() {
-	$('.subwindow').first().show();
-	$('#left ul li').first().addClass('active');
+	$('#left ul li').first().click();
 });
