@@ -10,6 +10,7 @@
 	<!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
 	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="correlations.js"></script>
 	<script type="text/javascript" src="dist.js"></script>
 	<script type="text/javascript" src="genstats.js"></script>
 </head>
@@ -57,7 +58,9 @@
 		<article id="correlations" class="subwindow">
 			<h1>Correlations</h1>
 			<div class="content">
-				Correlation exploration
+				Left click on the column name to to select the X-axis. Right click - Y-axis.
+				<div id="data-params"></div>
+				<div id="correlatins-chart"></div>
 			</div>
 		</article>
 		<article id="distributions" class="subwindow">

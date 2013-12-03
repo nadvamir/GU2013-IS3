@@ -112,3 +112,26 @@ html, body {
 #right .subwindow .content {
 	padding: 5px 20px;
 }
+
+#data-params {
+	position: absolute;	
+}
+
+#correlations-data-table {	
+    border-collapse: collapse;	
+}
+
+#correlations-data-table * {
+	border: 1px solid black;
+	padding: 2px;
+	cursor: pointer;
+}
+
+#correlations-data-table tr :hover {
+	background: #aaaaaa;
+}
+
+#correlatins-chart {
+	position: absolute;
+	right: 10px;
+}
