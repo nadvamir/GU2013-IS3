@@ -1,7 +1,7 @@
 var xParamIndex = -1;
 var yParamIndex = -1;
 
-var correlationsDatasetColumns = ["???","GDP2011","F2012","M2012","TeamSize","Number of dentistry personnel","Number of nursing and midwifery personnel","Number of physicians","Breast cancer deaths per 100_000 women","Breast cancer new cases per 100000 women","Breast cancer number of female deaths","Capital formation",
+var correlationsDatasetColumns = ["Total medals","GDP2011","F2012","M2012","TeamSize","Number of dentistry personnel","Number of nursing and midwifery personnel","Number of physicians","Breast cancer deaths per 100_000 women","Breast cancer new cases per 100000 women","Breast cancer number of female deaths","Capital formation",
 "Colon and Rectum cancer new cases per 100000 men","Colon and Rectum cancer new cases per 100000 women","Colon and Rectum cancer number of female deaths",
 "Colon and Rectum cancer number of male deaths","Lung cancer new cases per 100000 men","Lung cancer new cases per 100000 women","Lung cancer number of female deaths",	
 "Lung cancer number of male deaths","Prostate cancer deaths per 100000 men","Surface area","Tax revenue"];
