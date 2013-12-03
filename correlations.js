@@ -25,13 +25,12 @@ $(document).ready(function() {
 });
 
 
-$(document).on("contextmenu", "#correlations-data-table tr", function(event) {
+$(document).on("contextmenu", "#correlations-data-table td", function(event) {
 	return false;
 })	
 
-$(document).on("mousedown", "#correlations-data-table tr", function(event) {
-	var row = $.makeArray($("tr", $(this).parent().parent()));
-	var index = row.indexOf(this) - 1;
+$(document).on("mousedown", "#correlations-data-table td", function(event) {
+	var index = correlationsDatasetColumns.indexOf($(this).text());
 
 	switch (event.which) {
 		case 1: // left - sets x
@@ -85,6 +84,6 @@ function drawCorrelationsChart() {
 		height: 440,
 		trendlines: { 0: {} }
 	};
-	var distchart = new google.visualization.ScatterChart(document.getElementById('correlatins-chart'));
-	distchart.draw(data, options);
+	var corrchart = new google.visualization.ScatterChart(document.getElementById('correlatins-chart'));
+	corrchart.draw(data, options);
 };
