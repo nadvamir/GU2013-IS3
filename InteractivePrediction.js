@@ -28,26 +28,18 @@ function showContries(a){
 	var text;
 	var inp;
 	for (var i = 0;i < column.length;i++){
-		text=document.createTextNode(" : "+column[i]);
-		inp =document.createElement("input");
-		//inp.readOnly = true;
-		inp.setAttribute("id", column[i]);
-		inp.style.textAlign="center";
-		//inp.style.backgroundColor = 'white';
-		//inp.style.borderColor = 'white';
-		document.body.appendChild(document.createElement('br'));
-		document.body.appendChild(inp);
-		document.body.appendChild(text);
+		$label = $('<label for="'+column[i]+'">: ' + column[i] + '</label>');
+		$input = $('<input type="text" id="'+column[i]+'" />');
+		$('#input-fields').append($input);
+		$('#input-fields').append($label);
 			
 	}
-	document.body.appendChild(document.createElement('br'));
-	//document.getElementById('showbutton').style.visibility = 'hidden';
 	
 }
 function test(value){
 	var d = database(value);
 	var foo;
-	for (var i = 0;i <= column.length ;i++){
+	for (var i = 0;i < column.length ;i++){
 		foo = document.getElementById(column[i]);
 		foo.setAttribute("value",d[i+2]);
 	}
