@@ -32,27 +32,22 @@
 	<section id="right">
 		<article id="general" class="subwindow">
 			<h1>Medal Map</h1>
-			           <div class="content">
-			           <p>Heat Map to visualise the allocation of medals at the London 2012 Olympics</p>
-				       <script></script>
-				       <div id="geomapList">
-				            	<select id="options1" onchange="genstats();">
-				            	        <option disabled selected="selected">Select Continent</option>
-				            	    	<option value="0">All Continents</option>
-					            	    <option value="1">Africa</option>
-					            	    <option value="2">Asia</option>
-					            	    <option value="3">Europe</option>
-					            	    <option value="4">North America</option>
-					            	    <option value="5">South America</option>
-					            	    <option value="6">Central America</option>
-					            	    <option value="7">Caribbean</option>
-					            	    <option value="8">Oceania</option>
-					            	    
-				           	   </select>
-				       </div>
-				       <div id="geo_div" style="width: 1000px; height: 600px;"></div>
-				       <p>Total Number of medals awarded: 962</p>
-			           </div>
+				<div class="content">
+			       <p>Heat Map to visualise the allocation of medals at the London 2012 Olympics</p>
+				       <select id="options" onchange="genstats();">
+				           <option value="0">All Continents</option>
+		        	       <option value="1">Africa</option>
+		        	       <option value="2">Asia</option>
+		        	       <option value="3">Europe</option>
+		        	       <option value="4">North America</option>
+		        	       <option value="5">South America</option>
+		        	       <option value="6">Central America</option>
+		        	       <option value="7">Caribbean</option>
+		        	       <option value="8">Oceania</option>
+					   </select>
+				   <div id="geo_div" style="width: 1000px; height: 600px;"></div>
+				   <p>Total Number of medals awarded: 962</p>
+				</div>
 		</article>
 		<article id="correlations" class="subwindow">
 			<h1>Correlations</h1>
