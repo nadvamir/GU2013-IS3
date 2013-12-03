@@ -10,7 +10,7 @@ function distSelect() {
 			width: 0,
 			height: 440
 		};
-		var distchart = new google.visualization.ScatterChart(document.getElementById('dist_chart'));
+		var distchart = new google.visualization.LineChart(document.getElementById('dist_chart'));
 		distchart.draw(data, options);
 	};
 };
