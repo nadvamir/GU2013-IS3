@@ -259,7 +259,13 @@ function genstats(){
         document.getElementById('linechartList').style.display = 'none';
 	var data = google.visualization.arrayToDataTable(dataset[columnchartOption.options[columnchartOption.selectedIndex].value]);
         var options = {
-            title: title,
+            title: title,vAxis: { 
+    viewWindowMode:'explicit',
+    viewWindow: {
+        max:110,
+        min:0
+    }
+}
 	    };
         columnchart = new google.visualization.ColumnChart(document.getElementById('column_div'));
         columnchart.draw(data, options);
