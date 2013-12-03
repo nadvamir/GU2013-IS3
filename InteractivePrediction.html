@@ -6,10 +6,12 @@
 	</head>
 	<body>
 		<form>
-		    <select name="country" onchange="test(document.forms[0].country.value)" > 
+		    <select name="country" onchange="clearPrediction();test(document.forms[0].country.value);" > 
 		    </select>
 		    <script>showContries(document.forms[0].country);test(document.forms[0].country.value);</script>
-		    <INPUT type="button" value="Predicted" id="PredictedB" onclick="predicted()" />	
+		    <INPUT type="button" value="Predict" id="PredictedB" onclick="predicted()"  />	
+				    
 		</form>
+		<INPUT type="input" id="PredictedValue"  style="text-align: center"/> : Predicted Medal
 	</body>
 </html>
