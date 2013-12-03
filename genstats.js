@@ -259,7 +259,7 @@ function genstats(){
         document.getElementById('linechartList').style.display = 'none';
 	var data = google.visualization.arrayToDataTable(dataset[columnchartOption.options[columnchartOption.selectedIndex].value]);
         var options = {
-            title: title,vAxis: { 
+            title: "Medal Count By Country",vAxis: { 
     viewWindowMode:'explicit',
     viewWindow: {
         max:110,
