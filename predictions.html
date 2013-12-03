@@ -28,8 +28,8 @@
 			<li onclick="openSubwindow.call(this,
                         'graph');">Medal Predictions Graph</li>
 			<li onclick="openSubwindow.call(this,
-                        'interactive');">Interactive Medal Predictions</li>
-		</u	l>
+                        'interactive');showContries(document.forms[0].country);test(document.forms[0].country.value);">Interactive Medal Predictions</li>
+		</ul>
 	</section>	
 	<section id="right">
 		<article id="graph" class="subwindow">
@@ -42,14 +42,14 @@
 		<article id="interactive" class="subwindow">
 			<h1>Interactive Medal Predictions</h1>
 			<div class="content">
-                <p>Enter the values to predict medal count:</p>
-			    <form>
-				<select name="country" onchange="clearPrediction();test(document.forms[0].country.value);" > 
-				</select>
-				<script>showContries(document.forms[0].country);test(document.forms[0].country.value);</script>
-			    <INPUT type="button" value="Predict" id="PredictedB" onclick="predicted()"  />	
+                		<p>Enter the values to predict medal count:</p>
+				<form>
+				    <select name="country" onchange="clearPrediction();test(document.forms[0].country.value);" > 
+				    </select>
+				    <INPUT type="button" value="Predict" id="PredictedB" onclick="predicted()"  />
+				    <INPUT type="input" id="PredictedValue"  style="text-align: center"/><label for="PredictedValue">: Predicted Medals</label>
+				    <div id="input-fields"> </div>
 				</form>
-				<INPUT type="input" id="PredictedValue"  style="text-align: center"/> : Predicted Medal
 			</div>
 		</article>
 	</section>
