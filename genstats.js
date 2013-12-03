@@ -1,15 +1,11 @@
 function genstats(){
     
-    var myList = document.getElementById("genstatsList");
+    var geomapOption1 = document.getElementById("options1");
+    var title = "Heat Map";
     
-    var geomapOption = document.getElementById("list1");
-    var columnchartOption = document.getElementById("list2");
-    var linechartOption = document.getElementById("list3");
-    
-    var title = myList.options[myList.selectedIndex].text;
     var dataset = [
-
-	[['Country', 'Total Medals', 'Team Size'],
+    
+	['Country', 'Total Medals', 'Team Size'],
 	['Afghanistan', 1 ,6],
 	['Albania', 0 ,11],
 	['Algeria', 1 ,39],
@@ -124,7 +120,7 @@ function genstats(){
 	['Mauritania', 0 ,2],
 	['Mauritius', 0 ,11],
 	['Mexico', 7 ,106],
-	['Micronesia (Federated States of)', 0 ,6],
+	['Micronesia', 0 ,6],
 	['Moldova', 2 ,22],
 	['Monaco', 0 ,6],
 	['Mongolia', 5 ,29],
@@ -206,85 +202,56 @@ function genstats(){
 	['West Bank and Gaza', 0 ,5],
 	['Yemen', 0 ,4],
 	['Zambia', 0 ,7],
-	['Zimbabwe', 0 ,7]],
-
-	[['Country', 'Total Medals', 'Team Size'],
-	['United States', 104, 531]],
-
-	[['Country', 'Total Medals', 'Team Size'],
-	['China', 88, 371]],
-
-	[['Country', 'Total Medals', 'Team Size'],
-	['Russia', 82, 435]],
-
-	[['Country', 'Total Medals', 'Team Size'],
-	['United Kingdom', 65, 556]],
-
-	[['Country', 'Total Medals', 'Team Size'],
-	['Germany', 44, 395]]
+	['Zimbabwe', 0 ,7]
 	
     ];
     
-    if (title == 'Heat Map') {
-    	google.load("visualization", "1", {packages:["geochart"], "callback" : drawGeoChart});
-    } else if (title == 'Column Graph') {
-    	google.load("visualization", "1", {packages:["corechart"], "callback" : drawColumnChart});
-    } else if (title == "Line Graph") {
-    	google.load("visualization", "1", {packages:["corechart"], "callback" : drawLineChart});
-    };
-    
+    google.load("visualization", "1", {packages:["geochart"], "callback" : drawGeoChart});
+    	
     function drawGeoChart() {
-        document.getElementById('geo_div').style.display = '';
-        document.getElementById('geomapList').style.display = '';
-        document.getElementById('column_div').style.display = 'none';
-        document.getElementById('columnchartList').style.display = 'none';
-        document.getElementById('line_div').style.display = 'none';
-        document.getElementById('linechartList').style.display = 'none';
-	var data = google.visualization.arrayToDataTable(dataset[geomapOption.options[geomapOption.selectedIndex].value]);
+        /*
+        var array = getColumn(dataset, geomapOption1.options[geomapOption1.selectedIndex].value);
+	    var data = google.visualization.arrayToDataTable(array);
+	    */
+	    var regionSelect = '';
+	    var continent = geomapOption1.options[geomapOption1.selectedIndex].value
+	    
+	    if (continent == 0) {regionSelect = 'world'} 
+	    else if (continent == 1) {regionSelect = '002'}
+	    else if (continent == 2) {regionSelect = '142'}
+	    else if (continent == 3) {regionSelect = '150'}
+	    else if (continent == 4) {regionSelect = '021'}
+	    else if (continent == 5) {regionSelect = '005'}
+	    else if (continent == 6) {regionSelect = '013'}
+	    else if (continent == 7) {regionSelect = '029'}
+	    else if (continent == 8) {regionSelect = '009'}
+	    
+	    
+	    var data = google.visualization.arrayToDataTable(dataset);
         var options = {
             title: title,
             colorAxis: {colors: ['yellow','red']},
             backgroundColor: '#336699',
+            region: regionSelect
         };
         var geochart = new google.visualization.GeoChart(document.getElementById('geo_div'));
         geochart.draw(data, options);
     };
-
-    function drawColumnChart() {
-        document.getElementById('column_div').style.display = '';
-        document.getElementById('columnchartList').style.display = '';
-        document.getElementById('geo_div').style.display = 'none';
-        document.getElementById('geomapList').style.display = 'none';
-        document.getElementById('line_div').style.display = 'none';
-        document.getElementById('linechartList').style.display = 'none';
-	var data = google.visualization.arrayToDataTable(dataset[columnchartOption.options[columnchartOption.selectedIndex].value]);
-        var options = {
-            title: "Medal Count By Country",vAxis: { 
-    viewWindowMode:'explicit',
-    viewWindow: {
-        max:110,
-        min:0
-    }
-}
-	    };
-        columnchart = new google.visualization.ColumnChart(document.getElementById('column_div'));
-        columnchart.draw(data, options);
-    };
-
-    function drawLineChart() {
-        document.getElementById('line_div').style.display = '';
-        document.getElementById('linechartList').style.display = '';
-        document.getElementById('geo_div').style.display = 'none';
-        document.getElementById('geomapList').style.display = 'none';
-        document.getElementById('column_div').style.display = 'none';
-         document.getElementById('columnchartList').style.display = 'none';
-	var data = google.visualization.arrayToDataTable(dataset[linechartOption.options[linechartOption.selectedIndex].value]);
-        var options = {
-            title: title,
-	    };
-        var linechart = new google.visualization.LineChart(document.getElementById('line_div'));
-        linechart.draw(data, options);
-    };
     
 };
-
+/*
+function getColumn(dataset, j){
+    var newdataSet = new Array();
+    for (var i = 0; i < dataset.length; i++) {
+        var row = new Array();
+        //console.log(dataset[i].toString());
+        
+        row.push(dataset[i][0]);
+        console.log(dataset[i][0]);
+        row.push(dataset[i][j]);
+        console.log(dataset[i][0]); 
+        newdataSet.push(row);
+    }
+    return newdataSet;
+}
+*/
