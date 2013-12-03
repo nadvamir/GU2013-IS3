@@ -4,6 +4,10 @@ var column =["GDP2011","F2012","M2012","TeamSize","Number of dentistry personnel
 "Lung cancer number of male deaths","Prostate cancer deaths per 100000 men","Surface area","Tax revenue"																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
 ];
 
+function getId( str ) {
+	return str.replace(/ /g, '-');
+}
+
 correlation = [1.620525629155674e-11, 3.823360302614386e-10, 4.910070407988125e-10, 1.0435647292413e-09, -1.021722548638581e-08, -4.330423175136994e-07, -7.606026964545252e-07, -1.834479187590535e-08, -6.290370343565338e-08, -4.817752752107282e-07, 1.333472937355754e-07, -1.467052087137976e-09, -5.355793207997355e-09, -1.965021729186099e-09, -7.371994537409069e-11, -5.048682829772618e-08, -7.089560834082591e-08, -6.484838925087961e-08, -9.175853618312955e-08, 1.008489106700303e-08, -4.192843224961981e-06, -1.005249202737765e-11]
 
 function database(country_name){
@@ -28,8 +32,9 @@ function showContries(a){
 	var text;
 	var inp;
 	for (var i = 0;i < column.length;i++){
-		$label = $('<label for="'+column[i]+'">: ' + column[i] + '</label>');
-		$input = $('<input type="text" id="'+column[i]+'" />');
+		var id = getId( column[i] );
+		$label = $('<label for="'+id+'">: ' + column[i] + '</label>');
+		$input = $('<input type="text" id="'+id+'" />');
 		$('#input-fields').append($input);
 		$('#input-fields').append($label);
 			
@@ -38,17 +43,14 @@ function showContries(a){
 }
 function test(value){
 	var d = database(value);
-	var foo;
-	for (var i = 0;i < column.length ;i++){
-		foo = document.getElementById(column[i]);
-		foo.setAttribute("value",d[i+2]);
-	}
+	for (var i = 0;i < column.length ;i++)
+		$('#' + getId( column[i] )).val(d[i+2]);
 }
 
 function predicted(){
 	var num = 0;
 	for (var i = 0;i < column.length ;i++){
-		foo = document.getElementById(column[i]);
+		foo = document.getElementById( getId( column[i] ) );
 		num += foo.value*correlation[i];	
 	}
 	if (num < 0)
