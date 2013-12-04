@@ -75,6 +75,7 @@ medalData = [
     ['Guyana', 0, 6],
     ['Haiti', 0, 5],
     ['Honduras', 0, 31],
+    ['Hong Kong', 1, 42],
     ['Hungary', 17, 158],
     ['Iceland', 0, 28],
     ['India', 6, 83],
@@ -186,7 +187,7 @@ medalData = [
     ['Ukraine', 20, 236],
     ['United Arab Emirates', 0, 30],
     ['United Kingdom', 65, 556],
-    ['United States of America', 104, 231],
+    ['United States of America', 104, 596],
     ['Uruguay', 0, 33],
     ['Uzbekistan', 4, 54],
     ['Vanuatu', 0, 5],
@@ -195,6 +196,5 @@ medalData = [
     ['Yemen', 0, 4],
     ['Zambia', 0, 7],
     ['Zimbabwe', 0, 7]
-    
 ];
 

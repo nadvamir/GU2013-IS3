@@ -12,7 +12,7 @@ function genstats(){
        	var options = {
         	title: "Heat Map",
         	colorAxis: {colors: ['yellow','red']},
-        	backgroundColor: '#336699',
+        	backgroundColor: '#5FB7F5',
         	region: regionSelect
         };
 

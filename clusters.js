@@ -12,8 +12,10 @@ function getData( dataArray ) {
 function getOptions() {
     return {
         title: '2D projection of the multidimensional dataset',
-        hAxis: {title: '1st Dimension'},
-        vAxis: {title: '2st Dimension'},
+        hAxis: {title: '1st Dimension', textPosition: 'none' },
+        vAxis: {title: '2st Dimension', textPosition: 'none' },
+        colors: ['#5FB7F5'],
+	    explorer: {} ,
         legend: 'none'
     };
 }

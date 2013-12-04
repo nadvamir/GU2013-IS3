@@ -87,7 +87,8 @@ html, body {
 }
 
 #left ul li.active {
-	text-decoration: underline;
+	/* text-decoration: underline; */
+	color: #5FB7F5;
 }
 
 #left ol li a {
@@ -134,12 +135,20 @@ html, body {
 }
 
 #correlations-data-table tr :hover {
-	background: #aaaaaa;
+	background: #EBEBEB;
 }
 
 #correlatins-chart {
 	position: absolute;
-	right: 10px;
+	right: 0px;
+}
+
+.xActive {
+	background: #5FB7F5;
+}
+
+.yActive {
+	background: #C9C9C9;
 }
 
 /* ------------------------------------------------------ */

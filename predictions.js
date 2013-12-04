@@ -184,7 +184,8 @@ function prediction(){
         var options = {
           title: 'Medal Predictions',
           hAxis: {title: 'Country', titleTextStyle: {color: 'gray'}},
-          vAxis: {title: 'Number of Medals', titleTextStyle: {color: 'gray'}}    
+          vAxis: {title: 'Number of Medals', titleTextStyle: {color: 'gray'}},
+          colors:['#5FB7F5','red']    
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));

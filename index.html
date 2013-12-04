@@ -18,16 +18,16 @@
 <body>
 <div id="page">
 	<section id="left">
-		<h1 onclick="toggleMainNav();">Descriptive stats</h1>
+		<h1 onclick="toggleMainNav();">Descriptive Stats</h1>
 		<ol>
-			<li><a href="index.html">Descriptive stats</a></li>
+			<li><a href="index.html">Descriptive Stats</a></li>
 			<li><a href="clustering.html">2D Projections</a></li>
 			<li><a href="predictions.html">Predictions</a></li>
-			<li><a href="analysis.html">Analysis and overview</a></li>
+			<li><a href="analysis.html">Analysis</a></li>
 		</ol>
 		<ul>
 			<li onclick="openSubwindow.call(this, 'general'); genstats();">Medal Map</li>
-			<li onclick="openSubwindow.call(this, 'correlations');">Correlations</li>
+			<li onclick="openSubwindow.call(this, 'correlations'); correlations();">Correlations</li>
 			<li onclick="openSubwindow.call(this, 'distributions'); distSelect();">Distributions</li>
 		</ul>
 	</section>	
@@ -49,21 +49,30 @@
 		        	       <option value="7">Caribbean</option>
 		        	       <option value="8">Oceania</option>
 					   </select>
-				   <div id="geo_div" style="width: 1000px; height: 600px;"></div>
+				   <div id="geo_div" style="width: 980px; height: 600px;"></div>
 				   <p>Total Number of medals awarded: 962</p>
 				</div>
 		</article>
 		<article id="correlations" class="subwindow">
 			<h1>Correlations</h1>
 			<div class="content">
-				Left click on the column name to to select the X-axis. Right click - Y-axis.
+				<p><b>Interactive Scatter Chart to visualise the corellations between various sets of data</b></p>
+			    <p><i>Left click on the column name to to select the X-axis; right click to select the Y-axis</i></p>
+				<p><i>Click on the 'Swap Axis' button to invert the axes</i></p>
+				<button id="correlations-swap"> Swap Axis </button>
 				<div id="data-params"></div>
 				<div id="correlatins-chart"></div>
+				
 			</div>
 		</article>
 		<article id="distributions" class="subwindow">
 			<h1>Distributions</h1>
 			<div class="content" >
+			    <p><b>Interactive Scatter Chart to visualise various distributions about the countries in the dataset</b></p>
+			    <p><i>A <a href = "http://en.wikipedia.org/wiki/Grouped_data" title="Grouped data From Wikipedia, the free encyclopedia" target ="_blank">grouped data</a> approach has been utilised to show the
+			    <a href = "http://en.wikipedia.org/wiki/Frequency_distribution" title="frequency distributions From Wikipedia, the free encyclopedia" target ="_blank">frequency distributions</a> of the data</i></p>
+				<p><i>Hover over the map to see the data for individual countries</i><p>
+			    <p><i>Customise the map by selecting a distibution from the drop-down menu below</i></p>
 				<select id="distList" onchange="distSelect();">
 					<option>GDP</option>
 					<option>Population</option>
