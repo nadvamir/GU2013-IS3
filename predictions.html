@@ -35,15 +35,18 @@
 		<article id="graph" class="subwindow">
 			<h1>Medal Predictions Graph</h1>
 			<div class="content">
-                <p>The graph below shows a direct comparison of medals won by each country and what we predicted them – based on the data given – to have won. </p>
-				<p>Hover over the lines to see actual and predicted medal counts for specific countries.</p>
+			    <p><b>Graph to show a direct comparison between how many medals a country won and how many they were predicted to win</b></p>
+				<p><i>Hover over the lines to see actual and predicted medal counts for each country</i></p>
                 <div id="chart_div" style="width: 1000px; height: 500px;"></div>
 			</div>
 		</article>
 		<article id="interactive" class="subwindow">
 			<h1>Interactive Medal Predictions</h1>
 			<div class="content">
-                		<p>Enter the values to predict medal count:</p>
+			    <p><b>Interactive Medal Predictor to show how many medals we predicted a country to win at the London 2012 Olympics</b></p>
+			    <p><i>Select a country from the drop-down menu to view the data for that country. Click 'Predict' to view the prediction</i></p>
+			    <p><i>Customise the prediction by altering the values for each field</i></p>
+			    <br></br>
 				<form>
 				    <select name="country" onchange="clearPrediction();test(document.forms[0].country.value);" > 
 				    </select>

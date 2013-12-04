@@ -108,6 +108,7 @@ function genstats(){
         ['Guyana', 0, 6],
         ['Haiti', 0, 5],
         ['Honduras', 0, 31],
+        ['Hong Kong', 1, 42],
         ['Hungary', 17, 158],
         ['Iceland', 0, 28],
         ['India', 6, 83],

@@ -6,9 +6,11 @@ function distSelect() {
 		var data = google.visualization.arrayToDataTable(dataset[mylist.options[mylist.selectedIndex].text]);
 		var options = {
 			title: title,
+			hAxis: {title: title + ' range'},
+       		vAxis: {title: 'Count of countries' },
 			//curveType: "function",
 			width: 0,
-			height: 440
+			height: 600
 		};
 		var distchart = new google.visualization.LineChart(document.getElementById('dist_chart'));
 		distchart.draw(data, options);
