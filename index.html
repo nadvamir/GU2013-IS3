@@ -55,20 +55,23 @@
 		<article id="correlations" class="subwindow">
 			<h1>Correlations</h1>
 			<div class="content">
-				Left click on the column name to to select the X-axis. Right click - Y-axis.
+				<p><b>Interactive Scatter Chart to visualise the corellations between various sets of data</b></p>
+			    <p><i>Left click on the column name to to select the X-axis; right click to select the Y-axis</i></p>
+				<p><i>Click on the 'Swap Axis' button to invert the axes</i></p>
+				<button id="correlations-swap"> Swap Axis </button>
 				<div id="data-params"></div>
 				<div id="correlatins-chart"></div>
-				<button id="correlations-swap"> Swap Axis </button>
+				
 			</div>
 		</article>
 		<article id="distributions" class="subwindow">
 			<h1>Distributions</h1>
 			<div class="content" >
-				This page shows various distributions about countries. We are using 
-				<a href = "http://en.wikipedia.org/wiki/Grouped_data" title="Grouped data From Wikipedia, the free encyclopedia" target ="_blank">grouped data</a>
-				 approch to show 
-				 <a href = "http://en.wikipedia.org/wiki/Frequency_distribution" title="frequency distributions From Wikipedia, the free encyclopedia" target ="_blank">frequency distributions</a>
-				 . You can use the combobox to select a different distribution. You have the option to hover over the graph to see exact values.</br>
+			    <p><b>Interactive Scatter Chart to visualise various distributions about the countries in the dataset</b></p>
+			    <p><i>A <a href = "http://en.wikipedia.org/wiki/Grouped_data" title="Grouped data From Wikipedia, the free encyclopedia" target ="_blank">grouped data</a> approach has been utilised to show the
+			     <a href = "http://en.wikipedia.org/wiki/Frequency_distribution" title="frequency distributions From Wikipedia, the free encyclopedia" target ="_blank">frequency distributions</a> of the data</i></p>
+			    <p><i>Customise the map by selecting a distibution from the drop-down menu below</i></p>
+			    <p><i>Hover over the map to see the data for individual countries</i><p>
 				<select id="distList" onchange="distSelect();">
 					<option>GDP</option>
 					<option>Population</option>
