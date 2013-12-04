@@ -85,8 +85,8 @@ function drawCorrelationsChart() {
 	var data = google.visualization.arrayToDataTable(createDataArray());
 	var options = {
 		title: "Correlations",
-		hAxis: {title: correlationsDatasetColumns[xParamIndex], titleTextStyle: {color: "#ff0000"}},
-        vAxis: {title: correlationsDatasetColumns[yParamIndex], titleTextStyle: {color: "#0000ff"}},
+		hAxis: {title: correlationsDatasetColumns[xParamIndex], titleTextStyle: {color: "#5FB7F5"}},
+        vAxis: {title: correlationsDatasetColumns[yParamIndex], titleTextStyle: {color: "#318BCC"}},
         legend: 'none',
 		width: 600,
 		height: 440,
