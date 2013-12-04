@@ -96,11 +96,13 @@ function drawCorrelationsChart() {
 	var options = {
 		title: "Correlations",
 		hAxis: {title: correlationsDatasetColumns[xParamIndex], titleTextStyle: {color: "#5FB7F5"}},
-        vAxis: {title: correlationsDatasetColumns[yParamIndex], titleTextStyle: {color: "#C9C9C9"}},
+        vAxis: {title: correlationsDatasetColumns[yParamIndex], titleTextStyle: {color: "#8c8c8c"}},
         legend: 'none',
 		width: 600,
 		height: 440,
-		trendlines: { 0: {} }
+		colors: ['#5FB7F5'],
+		trendlines: { 0: { color: 'red'}}
+		
 	};
 	var corrchart = new google.visualization.ScatterChart(document.getElementById('correlatins-chart'));
 	corrchart.draw(data, options);

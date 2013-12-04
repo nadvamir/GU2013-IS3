@@ -14,6 +14,7 @@ function getOptions() {
         title: '2D projection of the multidimensional dataset',
         hAxis: {title: '1st Dimension', textPosition: 'none' },
         vAxis: {title: '2st Dimension', textPosition: 'none' },
+        colors: ['#5FB7F5'],
 	    explorer: {} ,
         legend: 'none'
     };
