@@ -20,5 +20,4 @@ function genstats(){
         geochart.draw(data, options);
     };
     
-    
 };
