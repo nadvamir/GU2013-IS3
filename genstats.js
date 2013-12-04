@@ -22,7 +22,7 @@ function genstats(){
        	var options = {
         	title: title,
         	colorAxis: {colors: ['yellow','red']},
-        	backgroundColor: '#336699',
+        	backgroundColor: '#5FB7F5',
         	region: regionSelect
         };
         
@@ -219,7 +219,7 @@ function genstats(){
         ['Ukraine', 20, 236],
         ['United Arab Emirates', 0, 30],
         ['United Kingdom', 65, 556],
-        ['United States of America', 104, 231],
+        ['United States of America', 104, 596],
         ['Uruguay', 0, 33],
         ['Uzbekistan', 4, 54],
         ['Vanuatu', 0, 5],

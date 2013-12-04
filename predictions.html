@@ -19,23 +19,24 @@
 	<section id="left">
 		<h1 onclick="toggleMainNav();">Predictions</h1>
 		<ol>
-			<li><a href="index.html">Descriptive stats</a></li>
+			<li><a href="index.html">Descriptive Stats</a></li>
 			<li><a href="clustering.html">2D Projections</a></li>
 			<li><a href="predictions.html">Predictions</a></li>
-			<li><a href="analysis.html">Analysis and overview</a></li>
+			<li><a href="analysis.html">Analysis</a></li>
 		</ol>
 		<ul>
 			<li onclick="openSubwindow.call(this,
                         'graph');">Medal Predictions Graph</li>
 			<li onclick="openSubwindow.call(this,
-                        'interactive');showContries(document.forms[0].country);test(document.forms[0].country.value);">Interactive Medal Predictions</li>
+                        'interactive');$('#input-fields').html('');showContries(document.forms[0].country);test(document.forms[0].country.value);">Interactive Medal Predictions</li>
 		</ul>
 	</section>	
 	<section id="right">
 		<article id="graph" class="subwindow">
 			<h1>Medal Predictions Graph</h1>
 			<div class="content">
-                <p>The graph below shows a direct comparison of medals won by each country and what we predicted them - based on the data given - to have won. </p>
+                <p>The graph below shows a direct comparison of medals won by each country and what we predicted them – based on the data given – to have won. </p>
+				<p>Hover over the lines to see actual and predicted medal counts for specific countries.</p>
                 <div id="chart_div" style="width: 1000px; height: 500px;"></div>
 			</div>
 		</article>
