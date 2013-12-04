@@ -87,7 +87,8 @@ html, body {
 }
 
 #left ul li.active {
-	text-decoration: underline;
+	/* text-decoration: underline; */
+	color: #5FB7F5;
 }
 
 #left ol li a {
