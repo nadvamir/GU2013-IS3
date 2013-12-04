@@ -52,12 +52,20 @@ function setXParamIndex(index, noupdate) {
 	xParamIndex	= index;
 	if (!noupdate)
 		drawCorrelationsChart();
+
+	var el = $("#correlations-data-table td:contains('"+correlationsDatasetColumns[index]+"')");
+	$(".xActive").removeClass("xActive");
+	el.addClass("xActive");
 }
 
 function setYParamIndex(index, noupdate) {
 	yParamIndex	= index;
 	if (!noupdate)
 		drawCorrelationsChart();
+
+	var el = $("#correlations-data-table td:contains('"+correlationsDatasetColumns[index]+"')");
+	$(".yActive").removeClass("yActive");
+	el.addClass("yActive");	
 }
 
 function createDataArray() {
@@ -77,8 +85,8 @@ function drawCorrelationsChart() {
 	var data = google.visualization.arrayToDataTable(createDataArray());
 	var options = {
 		title: "Correlations",
-		hAxis: {title: correlationsDatasetColumns[xParamIndex]},
-        vAxis: {title: correlationsDatasetColumns[yParamIndex]},
+		hAxis: {title: correlationsDatasetColumns[xParamIndex], titleTextStyle: {color: "#ff0000"}},
+        vAxis: {title: correlationsDatasetColumns[yParamIndex], titleTextStyle: {color: "#0000ff"}},
         legend: 'none',
 		width: 600,
 		height: 440,
