@@ -24,6 +24,14 @@ $(document).ready(function() {
 
 	table = table.replace("{data-rows}", dataRows);
 	$("#data-params").append(table);
+
+	$("#correlations-swap").click(function() {
+		var x = xParamIndex;
+		var y = yParamIndex;
+		setXParamIndex(y, true);
+		setYParamIndex(x, true);	
+		drawCorrelationsChart();	
+	})	
 });
 
 
@@ -97,3 +105,4 @@ function drawCorrelationsChart() {
 	var corrchart = new google.visualization.ScatterChart(document.getElementById('correlatins-chart'));
 	corrchart.draw(data, options);
 };
+
