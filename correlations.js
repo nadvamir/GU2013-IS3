@@ -96,7 +96,7 @@ function drawCorrelationsChart() {
 	var options = {
 		title: "Correlations",
 		hAxis: {title: correlationsDatasetColumns[xParamIndex], titleTextStyle: {color: "#5FB7F5"}},
-        vAxis: {title: correlationsDatasetColumns[yParamIndex], titleTextStyle: {color: "#FCB1B1"}},
+        vAxis: {title: correlationsDatasetColumns[yParamIndex], titleTextStyle: {color: "#C9C9C9"}},
         legend: 'none',
 		width: 600,
 		height: 440,
@@ -105,4 +105,3 @@ function drawCorrelationsChart() {
 	var corrchart = new google.visualization.ScatterChart(document.getElementById('correlatins-chart'));
 	corrchart.draw(data, options);
 };
-

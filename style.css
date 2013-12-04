@@ -134,7 +134,7 @@ html, body {
 }
 
 #correlations-data-table tr :hover {
-	background: #aaaaaa;
+	background: #d1d1d1;
 }
 
 #correlatins-chart {
@@ -147,7 +147,7 @@ html, body {
 }
 
 .yActive {
-	background: #FCB1B1;
+	background: #C9C9C9;
 }
 
 /* ------------------------------------------------------ */
