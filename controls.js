@@ -25,5 +25,4 @@ function removeSplashScreen() {
 // on the load of the document
 $(document).ready( function() {
     $('#left ul li').first().click();
-    openSplashScreen();
 });
