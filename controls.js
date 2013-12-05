@@ -15,7 +15,14 @@ function openSubwindow( id ) {
 	$('#'+id).show();
 }
 
+function openSplashScreen() {
+    $('#splashscreen').show();
+}
+function removeSplashScreen() {
+    $('#splashscreen').hide();
+}
+
 // on the load of the document
 $(document).ready( function() {
-	$('#left ul li').first().click();
+    $('#left ul li').first().click();
 });
