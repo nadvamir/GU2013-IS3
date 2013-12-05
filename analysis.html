@@ -24,38 +24,65 @@
 			<li onclick="openSubwindow.call(this, 'trends');">Trends</li>
 			<li onclick="openSubwindow.call(this, 'predictors');">Medal Predictors</li>
 			<li onclick="openSubwindow.call(this, 'recommendations');">Recommendations</li>
-			<li onclick="openSubwindow.call(this, 'findings');">Findings</li>
-		</u	l>
+		</ul>
 	</section>	
-	<section id="right">
+	<section id="right" class="textual">
 		<article id="overview" class="subwindow">
 			<h1>General Overview</h1>
 			<div class="content">
-				What data do we how, how does it look
+				<p>The information here is based on the two datasets: the one about the medals won by countries
+in the London 2012 Olympiad and WHO statistics for multitude of countries. The first dataset is complete and clean, however the 
+second one is quite inconsistent. In order to provide you this solution, we had to merge those two datasets, and we have eliminated
+mostly empty columns and rows. The remaining missing values were filled with zeroes and interpreted as noise.</p>
+				<p>There are 173 countries in the remaining data set, featuring 258 dimensions, 4 of which are describing medal count.</p>
 			</div>
 		</article>
 		<article id="trends" class="subwindow">
 			<h1>Trends</h1>
 			<div class="content">
-				What trends can we find in data
+				<p>We have found that big countries do not necessarily win lots of medals, but wealthy countries do. 
+Unsurprisingly, the more athletes does a country send to the games, the more medals it usually brings back home.</p>
+				<p>The medal distribution is quite uneven. Most of the countries do not win any medals.
+Then there is a healthy middle, and a few notable countries who get most of the medals: the USA, China, Russia and the UK.</p>
+				<p>When visualising countries we have found, that most of them fall on the same line with
+the increasing wellbeing towards one end, but there are certain ones of them that fall outside of this continuum, usually aforementioned
+four together with India, Brazil, Canada and a few others. That would mean that these countries have certain characteristics that are
+disproportionate to others, which we think are related to their size.</p>
+				<p>From the visualisation of the medical situation in the world, we can once again conclude, that most
+of the Africa is still at the lower end of spectrum, while the bright side of it is preoccupied predominantly by Western European countries,
+and some others that we would consider a part of developed world, like the USA, Japan or New Zealand.</p>
 			</div>
 		</article>
 		<article id="predictors" class="subwindow">
 			<h1>Medal Predictors</h1>
 			<div class="content">
-				What are good predictors for medal count
+				<p>We did not do enough research to firmly establish, which fields would be the most useful
+in predicting the medal count. However we can definitely spot some correlations.</p>
+				<p>The team size correlates with the medal count extremely well, which is only natural, since
+it is difficult (though possible) to win more medals than the number of athletes you have sent. And some countries won more medals,
+than the size of a few delegations of smaller countries put together.</p>
+				<p>Number of various medical personel was also highly correlated, since it shows the general development
+of the country.</p>
+				<p>Tax revenue, capital formation and the country size are another predictors, however the later one might be biased by a few
+extremely large countries winning a lot of medals.</p>
+				<p>The last group of correlated columns, and the biggest one of them, is the most controversial: all sorts of cancer-related
+data appears to be inline with the medals. It might be yet another indicator of the developed country, though, since such countries usually have worse environmental
+conditions than rural states, as well as greater lifespan, increasing the likelyhood of bad mutations.</p>
 			</div>
 		</article>
 		<article id="recommendations" class="subwindow">
 			<h1>Recommendations</h1>
 			<div class="content">
-				What would we recommend other countries, in order to get more medals (or just in general)
-			</div>
-		</article>
-		<article id="findings" class="subwindow">
-			<h1>Findings</h1>
-			<div class="content">
-				What other interesting features have we found
+				<p>In order to win more medals, it pays to be a well-developed country with a stable financial situation.
+It comes to no surprise, however this is the most prominent trend. The notable exception is Russia, which is less developed than say Germany,
+yet still brings much more medals; nonetheless we can speculate that this is a matter of pride for the country, and the country thus probably spends
+larger precentage of its GDP on training its team, countering the issue with the generally poorer economic situation. This theory get additional support
+from the fact, that GDP does correlate with medals better than GDP per capita, which is counterintuitive at the beginning.</p>
+				<p>It seems that having a more developed medical system also helps, since the countries with the greater
+concentration of medical personel were performing better. Which is yet another indication of being better developed.</p>
+				<p>In short, the countries should spend more on sports and improve the healthcare situation. They should also probably
+aim to increase a lifespan, which we speculate from the cancer correlation to medals. Even if that does not give you more medals, you will end up
+with a better place to live, so this is a win-win situation.</p>
 			</div>
 		</article>
 	</section>
