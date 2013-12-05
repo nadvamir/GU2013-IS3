@@ -39,7 +39,7 @@ function showContries(a){
 		$('#input-fields').append($input);
 		$('#input-fields').append($label);	
 	}
-	$('#input-fields').append('<input type="button" value="Predict" id="PredictedB" onclick="predicted()"  /> <label></label><input type="input" id="PredictedValue"  style="text-align: center"/><label for="PredictedValue"> : Predicted Medals</label>');
+	$('#input-fields').append('<input type="button" value="Predict" id="PredictedB" onclick="predicted()"  /> <label></label><input type="input" id="PredictedValue"  style="text-align: center"/><label for="PredictedValue" style="color: red;"> : Predicted Medals</label>');
 	$("#PredictedB").prop("disabled",true);
 }
 function test(value){
